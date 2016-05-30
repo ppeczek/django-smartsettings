@@ -23,9 +23,9 @@ __license__ = 'ISC'
 __copyright__ = 'Copyright 2012 Tomek Kopczuk'
 
 import django
-if django.get_version() >= 1.9:
+try:
     import importlib
-else:
+except ImportError:
     from django.utils import importlib
 import os
 import sys
